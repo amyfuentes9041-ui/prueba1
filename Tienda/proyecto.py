@@ -25,4 +25,18 @@ class Categoria:
         print ( f"El producto {producto.nombre} se agrego a la lista")
 
     def valor_total_categoria(self):
-        pass
+        suma=0
+        for b in self.lista_producto:
+            suma +=b.precio
+        print (f"El valor total de la categoria es {suma}")
+
+class Pedido:
+    def __init__(self, cliente, productos_comprados, estado):
+        self.cliente = cliente 
+        self.productos_comprados = []
+
+    def calcular_total (self):
+        suma = 0 
+        for b in self.productos_comprados:
+            suma +=b.precio
+        
